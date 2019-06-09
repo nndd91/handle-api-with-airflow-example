@@ -1,4 +1,5 @@
 __pycache__
 venv
 /airflow/*
-!.airflow/dags
+!airflow/dags
+!airflow/plugins
