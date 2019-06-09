@@ -4,6 +4,10 @@ import json
 app = Flask(__name__)
 
 
+@app.route('/hello-api')
+def hello_api():
+    return 'Hi!'
+
 @app.route('/get-list-of-user-ids')
 def get_list_of_user_ids():
     return json.dumps([1, 2, 3, 4, 5])
