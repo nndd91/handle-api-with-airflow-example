@@ -19,10 +19,5 @@ Recommended to set up a virtual environment for your python projects.
 7. Start scheduler with `airflow scheduler`
 
 You can now visit `localhost:8080` for airflow.
-Also you can do a post request to `localhost:5000/api-call-example` with post body 
-```
-{
-	"user_ids": []
-}
-``` 
-and make sure you receive `{"status": "Success"}` as response
+Also you can do a get request to `localhost:5000/get-list-of-user-ids` 
+and make sure you receive `[1, 2, 3, 4, 5]` as response

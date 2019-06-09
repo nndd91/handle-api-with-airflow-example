@@ -1,5 +1,7 @@
 __pycache__
 venv
+.env
+flask_example/flask_venv
 /airflow/*
 !airflow/dags
 !airflow/plugins
