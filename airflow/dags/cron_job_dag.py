@@ -5,8 +5,8 @@ from airflow.operators.http_operator import SimpleHttpOperator
 from airflow.operators.dagrun_operator import TriggerDagRunOperator
 
 dag = DAG(
-    'api-call-cron-job',
-    schedule_interval='30 * * * *',
+    'cron-job-dag',
+    schedule_interval='30 1 * * *',
     start_date=datetime(2018, 1, 1),
     catchup=False)
 
@@ -35,7 +35,7 @@ def trigger_dag_run_callable(context, dro):
 
 trigger_collection = TriggerDagRunOperator(
     task_id='trigger_api_call',
-    trigger_dag_id='api-recovery-dag',
+    trigger_dag_id='process-user-ids-dag',
     python_callable=trigger_dag_run_callable
 )
 

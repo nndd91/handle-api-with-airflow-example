@@ -6,7 +6,7 @@ from airflow.operators.dagrun_operator import TriggerDagRunOperator, DagRunOrder
 from airflow.operators.dummy_operator import DummyOperator
 from airflow.operators.custom_plugin import ExtendedHttpOperator
 
-dag = DAG('api-recovery-dag',
+dag = DAG('process-user-ids-dag',
           schedule_interval=None,
           start_date=datetime(2018, 1, 1),
           catchup=False)
@@ -72,7 +72,7 @@ def handle_api_error_callable(context, dro):
 
 handle_api_error = TriggerDagRunOperator(
     task_id='handle_api_error',
-    trigger_dag_id='api-recovery-dag',
+    trigger_dag_id='process-user-ids-dag',
     python_callable=handle_api_error_callable
 )
 
