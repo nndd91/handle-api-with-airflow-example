@@ -1,15 +1,18 @@
-# Python Env
+# Readme
+This repository contains the full source code for the article, [Handle Api Response with Airflow Example](https://medium.com/stashaway-engineering/handling-api-errors-with-airflow-79738868d663). Read the article for a more detailed walk-through of the repository. Otherwise, follow the following instructions to get it up and running.
+
+## Python Env
 Recommended to set up a virtual environment for your python projects. 
 `https://virtualenv.pypa.io/en/latest/`
 
-# Flask App
+## Flask App
 1. Make sure you are in `flask_example` folder
 2. Create venv using `virtualenv flask_venv`
 3. Activate the venv. `source flask_venv/bin/activate`
 4. Install flask using `pip install -r requirements.txt`
 5. Run with `export FLASK_APP=app.py; flask run`
 
-# Airflow
+## Airflow
 1. Make sure you are in `airflow` folder
 2. Create venv using `virtualenv af_venv -p python3.6`
 3. Activate the venv. `source af_venv/bin/activate`
